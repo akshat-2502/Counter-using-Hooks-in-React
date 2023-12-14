@@ -16,7 +16,9 @@ function App() {
   }
 
   const decreaseValue = () => {
-    setCounter(counter-1)
+    if(counter >0 ){
+      setCounter(counter-1)
+    }
   }
   
 
