@@ -6,7 +6,18 @@ import './App.css'
 
 function App() {
 
-  let counter = 15;
+
+//hooks
+  let [counter, setCounter] = useState(0)
+  
+
+  const addValue = () => {
+    setCounter(counter+1)
+  }
+
+  const decreaseValue = () => {
+    setCounter(counter-1)
+  }
   
 
   return (
@@ -14,10 +25,18 @@ function App() {
       <h1>Counter Using Hooks</h1>
       <h2>Counter Value : {counter}</h2>
 
-      <button>Add Value</button>
+      <button onClick={addValue}>
+        Add Value
+      </button>
+
+
       <br/>
       <br/>
-      <button>Decrease Value</button>
+
+
+      <button onClick={decreaseValue}>
+        Decrease Value
+        </button>
     </>
   )
 }
